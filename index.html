@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정보 제공 사이트</title>
+    <title>HTML INFORMATION</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,11 +15,33 @@
             margin: 0;
         }
 
+        table {
+            border-collapse: collapse;
+            text-align: left;
+            width : 900px;
+            font-size : 15px;
+            margin:auto;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+        }
+
+        .example {
+            display:flex;
+            font-size: 25px;
+            background-color: #c3c3c3;
+        }
+
         .container {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
+            flex-direction:row;
+            gap: 30px;
+            position:absolute;
+            top:50px;
+            left:50px;
+            right:50px;
         }
 
         .info-button {
@@ -38,34 +60,38 @@
         }
 
         .info-card {
-            max-width: 400px;
+            position: absolute;
+            top:150px;
+            width: 1300px;
             padding: 20px;
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            font-size:25px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <button id="btn1" class="info-button">HTML HOME</button>
-        <button id="btn2" class="info-button">HTML </button>
-        <button id="btn2" class="info-button">HTML </button>
-        <button id="btn2" class="info-button">HTML </button>
-        <button id="btn2" class="info-button">HTML </button>
-        <button id="btn2" class="info-button">HTML </button>
-        <button id="btn2" class="info-button">HTML </button>
-        <button id="btn2" class="info-button">HTML </button>
-        <button id="btn2" class="info-button">HTML </button>
-        <button id="btn2" class="info-button">HTML </button>
-        <button id="btn2" class="info-button">HTML </button>
-        <button id="btn2" class="info-button">HTML </button>
+        <button id="btn1" class="info-button">HTML 홈</button>
+        <button id="btn2" class="info-button">HTML 소개</button>
+        <button id="btn3" class="info-button">HTML 기본</button>
+        <button id="btn4" class="info-button">HTML 요소</button>
+        <button id="btn5" class="info-button">HTML 속성</button>
+        <button id="btn6" class="info-button">HTML 제목</button>
+        <button id="btn7" class="info-button">HTML 문단</button>
+        <button id="btn8" class="info-button">HTML 스타일</button>
+        <button id="btn9" class="info-button">HTML 서식</button>
+        <button id="btn10" class="info-button">HTML 주석</button>
+        <button id="btn11" class="info-button">HTML 이미지</button>
+        <button id="btn12" class="info-button">HTML 테이블</button>
         
         <!-- 필요한 만큼 버튼 추가 -->
     </div>
 
     <div id="info-display" class="info-card">
+
         <!-- 버튼을 클릭했을 때 나타날 정보들 -->
     </div>
 
@@ -73,28 +99,174 @@
         const btn1 = document.getElementById('btn1');
         const btn2 = document.getElementById('btn2');
         const btn3 = document.getElementById('btn3');
+        const btn4 = document.getElementById('btn4');
+        const btn5 = document.getElementById('btn5');
+        const btn6 = document.getElementById('btn6');
+        const btn7 = document.getElementById('btn7');
+        const btn8 = document.getElementById('btn8');
+        const btn9 = document.getElementById('btn9');
+        const btn10 = document.getElementById('btn10');
+        const btn11 = document.getElementById('btn11');
+        const btn12 = document.getElementById('btn12');
         // 필요한 만큼 버튼 변수 추가
 
         const infoDisplay = document.getElementById('info-display');
 
         btn1.addEventListener('click', () => {
             infoDisplay.innerHTML = `
-                <h2>버튼 1 클릭</h2>
-                <p>버튼 1에 대한 정보를 여기에 추가하세요.</p>
+                <h1>HTML은 웹사이트를 만들기 위한 <br>마크업 언어입니다.</h1>
+                <p>HTML을 사용하면 나만의 웹사이트를 만들기 편리합니다.<p>
             `;
         });
 
         btn2.addEventListener('click', () => {
             infoDisplay.innerHTML = `
-                <h2>버튼 2 클릭</h2>
-                <p>버튼 2에 대한 정보를 여기에 추가하세요.</p>
+                <h1>HTML이란 무엇일까?</h1>
+                <p>HTML은 Hyper Text Markup Language의 약자입니다.<br>HTML은 웹 페이지를 만드는 표준 마크업 언어이며,<br>웹 페이지의 구조를 설명합니다. </p>
             `;
         });
 
         btn3.addEventListener('click', () => {
             infoDisplay.innerHTML = `
-                <h2>버튼 3 클릭</h2>
-                <p>버튼 3에 대한 정보를 여기에 추가하세요.</p>
+                <h1>HTML 문서의 기본</h1>
+                <p>모든 HTML 문서는 &lt;!DOCTYPE html>이라는 태그를 작성해<br>문서 유형 선언을 해야 합니다.<br>
+                    유형 선언을 제외한 HTML 문서 자체는 &lt;html&gt;로 시작하고 &lt;/html&gt;로 끝납니다.<br>
+                    HTML 문서에서 사이트에서 보이는 부분은 &lt;body&gt;와 &lt;/body&gt; 사이입니다.<p>
+            `;
+        });
+
+        btn4.addEventListener('click', () => {
+            infoDisplay.innerHTML = `
+                <h1>HTML 문서의 요소는 시작 태그부터 끝 태그까지의 모든 것을 말합니다.<h1>
+                <h4>예시</h4>
+                <table>
+                    <tr>
+                        <th>번호</th>
+                        <th>예시</th>
+                        <th>실행 결과</th>
+                    </tr>
+                    <tr>
+                        <td>1번</td>
+                        <td>&lt;h1&gt;h태그는 숫자가 작아질수록&lt;h1&gt;</td>
+                        <td><h1>h태그는 숫자가 작아질수록</h1></td>
+                    </tr>
+                    <tr>
+                        <td>2번</td>
+                        <td>&lt;h6&gt;텍스트 크기가 작아지는 타이틀입니다.&lt;h6&gt;</td>
+                        <td><h6>텍스트 크기가 작아집니다.</h6></td>
+                    <tr>
+                        <td>3번</td>
+                        <td>&lt;p&gt;p태그는 문단입니다.&lt;p&gt;</td>
+                        <td><p>p태그는 문단입니다.</p></td>
+                    </tr>
+            `;
+        });
+
+        btn5.addEventListener('click', () => {
+            infoDisplay.innerHTML = `
+                <h1>HTML 속성</h1>
+                <p>모든 HTML 요소는 속성을 가질 수 있습니다.<br>속성은 요소에 대한 추가 정보를 제공하며,<br>속성은 항상 시작 태그에 지정됩니다.</p>
+                <p> 예를 들자면, 태그 &lt;a>는 하이퍼링크를 정의하며,<br>href 속성은 하이퍼링크를 통해 이동하는 페이지의 URL을 저장합니다.</p>
+                <p>&lt;a href="https://bongdam-h.goehs.kr/bongdam-h/main.do">봉담고등학교 홈페이지&lt;/a>를 입력하게 되면, <br>
+                <a href="https://bongdam-h.goehs.kr/bongdam-h/main.do">봉담고등학교 홈페이지</a>와 같은 결과가 나오게 되는데,<br> 클릭하면 봉담고등학교 홈페이지로 들어가지게 됩니다.</p>
+            `;
+        });
+
+        btn6.addEventListener('click', () => {
+            infoDisplay.innerHTML = `
+                <h1>HTML 제목</h1>
+                <p>문서의 요소에서 잠깐 등장했던 파트인데, &lt;h1~6> 태그로 정의됩니다.<br> &lt;h1>태그에서 &lt;h6>태그로 갈수록 크기가 점점 작아집니다.<br>더 중요하거나 덜 중요한 제목을 강조할 때 사용합니다.<br>
+                    &lt;h1> 태그가 가장 큰 제목이지만, HTML 속성을 이용하여 제목을 더 크거나 작게 만들 수 있습니다.</p>
+                <p>예시 &lt;h1 style="font-size:100px;">글자가 너무 커요&lt;h1>와 같이 입력하게 되면,<br>
+                    <h1 style="font-size:100px;">글자가 너무 커요</h1>와 같은 결과가 나타나게 된다.</p>
+            `;
+        });
+
+        btn7.addEventListener('click', () => {
+            infoDisplay.innerHTML = `
+                <h1>HTML 문단</h1>
+                <p>이 또한 문서의 요소에서 잠깐 등장했던 파트입니다.<br>&lt;p> 태그로 정의됩니다.<br>문단은 항상 새 줄에서 시작하며, 문단 앞과 뒤에 자동으로 약간의 공백을 추가합니다.<br>
+                    &lt;p>태그를 사용하였을 때 HTML이 어떻게 표시될지는 모릅니다. 화면의 크고 작음과 창 크기의 조절 등에 따라 결과가 달라지기 때문입니다.<br>
+                    하지만 HTML을 사용하면, 브라우저는 페이지가 표시될 때 모든 불필요한 공백과 줄을 자동으로 제거합니다.<br>
+                    예를 들어,<br> &lt;p>안 녕<br>하세 요.&lt;/p><br>를 입력해도, 안녕하세요.라고 출력됩니다.</p>
+            `;
+        });
+
+        btn8.addEventListener('click', () => {
+            infoDisplay.innerHTML = `
+               <h1> HTML 스타일</h1>
+               <p>"style"은 앞에서 공부한 HTML 속성 중 하나인데, 색상, 글꼴, 크기 등의 스타일을 요소에 추가하는 데 사용됩니다.<br>
+                예를 들어, <br>&lt;p style="color:red">빨간색&lt;/p>나, &lt;p style="background-color:blue">,배경 파란색&lt;/p><br>
+                과 같은 코드를 사용하면<br>
+                <p style="color:red">빨간색</p> <p style="background-color:blue">배경 파란색</p><br>
+                과 같은 결과가 출력되게 됩니다.
+            `;
+        });
+
+        btn9.addEventListener('click', () => {
+            infoDisplay.innerHTML = `
+                <h1>HTML 서식</h1>
+                <p>HTML의 서식 요소는 특별한 의미를 가진 텍스트를 정의하기 위한 여러 요소가 포함되어 있습니다.<br>
+                예시 : <b>이 글자는 굵습니다.</b> / <i>이 글자는 기울었습니다.</i><br><mark>이 글자는 표시되어 있습니다.</mark> / <del>이 글자는 지워졌습니다.</del><br>
+                HTML의 서식 요소 : <br>
+                &ltb> : 굵은 텍스트, &ltstrong> : 중요한 텍스트<br>
+                &lti> : 이탤릭체(기울어진) 텍스트, &ltem> : 강조된 텍스트<br>
+                &ltmark> : 표시된 텍스트, &ltsmall> : 작은 텍스트<br>
+                &ltdel> : 삭제된 텍스트, &ltins> : 삽입된 텍스트<br>
+            `;
+        });
+
+        btn10.addEventListener('click', () => {
+            infoDisplay.innerHTML = `
+                <h1>HTML 주석</h1>
+                <p>HTML 주석은 브라우저에는 표시되지 않지만, HTML 소스 코드를 문서화하는 데 도움이 될 수 있습니다.<br>
+                <!-- 뭐시기뭐시기 -->과 같은 태그를 이용하여 HTML 소스에 주석을 추가할 수 있습니다.
+                예시 : <br>&lt;!--이 아래에는 문장이 써 있습니다.--><br>
+                &lt;p>문장&lt;/p><br>
+                과 같이 입력하게 되면, &lt;p> 태그에 들어있는 "문장"만 출력되게 됩니다.</p>
+            `;
+        });
+
+        btn11.addEventListener('click', () => {
+            infoDisplay.innerHTML = `
+                <h1>HTML 이미지</h1>
+                <p>이미지를 이용하면 웹 페이지의 디자인과 모양을 개선할 수 있습니다.<br>
+                이미지는 &lt;img> 태그로 사용되며, 기술적으로는 웹 페이지에 삽입되는 것이 아닌 링크되는 것입니다.<br>
+                기존의 태그와는 달리 &lt;img> 태그는 비어 있으며, 속성만 포함합니다. 닫는 태그 또한 없습니다.</p>
+                <p> &lt;img> 태그에는 이미지의 경로를 지정하는 src 속성과 <br>이미지를 대체하는 텍스트를 지정하는 alt 속성이 필수적입니다.<br>
+                브라우저에서 사진의 링크를 복사해 &lt;img src="https://cdn.hankyung.com/photo/201709/01.14762972.1.jpg" alt="sky">와 같이 입력하게 되면,</p>
+                <p><img src="https://cdn.hankyung.com/photo/201709/01.14762972.1.jpg" alt="sky"><br>이렇게 사진이 나타나게 됩니다.<br>
+                만약 코드가 잘못되어 &lt;img src="uzzugozuzzugomichigettdda.jpg" alt="sky">와 같이 입력하게 되면, <br>브라우저가 이미지를 찾지 못해<br>
+                <img src="uzzugozuzzugomichigettdda.jpg" alt="sky">처럼 대체 텍스트가 나오게 됩니다.
+                
+            `;
+        });
+
+        btn12.addEventListener('click', () => {
+            infoDisplay.innerHTML = `
+                <h1>HTML 테이블</h1>
+                <p>말 그대로 테이블, 즉 표를 만드는 코드입니다. &lt;table> 태그로 구성됩니다.<br>
+                &lt;table> 태그 안에는 &lt;tr> 태그와 &lt;th> 태그, &lt;tb> 태그로 구성되는데,<br>&lt;tr>태그는 테이블 행을 의미합니다.
+                <br>&lt;th> 태그는 테이블 헤더로써 각 열이나 행에서 머리글을 수행합니다.<br>
+                &lt;tb> 태그는 테이블의 셀 하나를 의미합니다. 이를 모두 합쳐 테이블의 예시를 들어 보면,<br>
+                &lt;table><br>&lt;tr><br>&lt;th>사람이름&lt;/th><br>&lt;th>나이&lt;/th><br>&lt;/tr><br>&lt;tr><br>&lt;td>임도윤&lt;/td><br>&lt;td>19세&lt;/td><br>&lt;/tr><br>&lt;tr><br>&lt;td>최영운&lt;/td><br>&lt;td>19세&lt;/td><br>&lt;/tr><br>&lt;/table><br>
+                과 같이 나타낼 수 있고, 이는<br>
+                <table style="width:200px;">
+                    <tr>
+                        <th>사람이름</th>
+                        <th>나이</th>
+                    </tr>
+                    <tr>
+                        <td>임도윤</td>
+                        <td>19세</td>
+                    </tr>
+                    <tr>
+                        <td>최영운</td>
+                        <td>19세</td>
+                    </tr>
+                </table><br>
+                과 같은 결과로 나타나게 됩니다.
+                        
             `;
         });
 
