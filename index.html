@@ -47,7 +47,7 @@
         .info-button {
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #4CAF50;
+            background-color: hsl(48, 96%, 48%);
             color: white;
             border: none;
             cursor: pointer;
@@ -56,7 +56,7 @@
         }
 
         .info-button:hover {
-            background-color: #45a049;
+            background-color: hwb(25 18% 0%);
         }
 
         .info-card {
@@ -64,7 +64,7 @@
             top:150px;
             width: 1300px;
             padding: 20px;
-            background-color: white;
+            background: linear-gradient(to bottom right, #ff7f00, #ffcc80);
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -137,7 +137,7 @@
 
         btn4.addEventListener('click', () => {
             infoDisplay.innerHTML = `
-                <h1>HTML 요소<h1>
+                <h1>HTML 요소</h1>
                 <p>HTML 문서의 요소는 시작 태그부터 끝 태그까지의 모든 것을 말합니다.</p>
                 <h4>예시</h4>
                 <table>
