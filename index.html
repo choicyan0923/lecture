@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정보 제공 사이트</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .info-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .info-button:hover {
+            background-color: #45a049;
+        }
+
+        .info-card {
+            max-width: 400px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="btn1" class="info-button">HTML HOME</button>
+        <button id="btn2" class="info-button">HTML </button>
+        <button id="btn2" class="info-button">HTML </button>
+        <button id="btn2" class="info-button">HTML </button>
+        <button id="btn2" class="info-button">HTML </button>
+        <button id="btn2" class="info-button">HTML </button>
+        <button id="btn2" class="info-button">HTML </button>
+        <button id="btn2" class="info-button">HTML </button>
+        <button id="btn2" class="info-button">HTML </button>
+        <button id="btn2" class="info-button">HTML </button>
+        <button id="btn2" class="info-button">HTML </button>
+        <button id="btn2" class="info-button">HTML </button>
+        
+        <!-- 필요한 만큼 버튼 추가 -->
+    </div>
+
+    <div id="info-display" class="info-card">
+        <!-- 버튼을 클릭했을 때 나타날 정보들 -->
+    </div>
+
+    <script>
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        const btn3 = document.getElementById('btn3');
+        // 필요한 만큼 버튼 변수 추가
+
+        const infoDisplay = document.getElementById('info-display');
+
+        btn1.addEventListener('click', () => {
+            infoDisplay.innerHTML = `
+                <h2>버튼 1 클릭</h2>
+                <p>버튼 1에 대한 정보를 여기에 추가하세요.</p>
+            `;
+        });
+
+        btn2.addEventListener('click', () => {
+            infoDisplay.innerHTML = `
+                <h2>버튼 2 클릭</h2>
+                <p>버튼 2에 대한 정보를 여기에 추가하세요.</p>
+            `;
+        });
+
+        btn3.addEventListener('click', () => {
+            infoDisplay.innerHTML = `
+                <h2>버튼 3 클릭</h2>
+                <p>버튼 3에 대한 정보를 여기에 추가하세요.</p>
+            `;
+        });
+
+        // 필요한 만큼 버튼 클릭 이벤트 핸들러 추가
+    </script>
+</body>
+</html>
